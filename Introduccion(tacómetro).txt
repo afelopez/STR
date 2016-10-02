@@ -13,3 +13,41 @@ optima su meta.
 Mediante el uso de un  sistema de adquisición de datos: que consiste en la toma
 de muestras del mundo real (sistema analógico) para generar datos que puedan ser
 manipulados por un ordenador (sistema digital).
+
+Antes de comenzar a describir la solución, debemos tener encuenta algunos
+terminos y conceptos:
+
+-   Tacómetro: Instrumento para medir la velocidad de rotación de un mecanismo
+    de la máquina al que va acoplado; generalmente, indica la velocidad en
+    revoluciones por minuto. Sinónimos:	cuentavueltas, taquímetro.
+
+    El tacómetro para esta aplicación necesita:
+
+    i.    Algún tipo de sensor que determine cuando se completa un ciclo.
+    ii.   Una pantalla en la cual se pueda observar la medición.
+    iii.  Una unidad de procesamiento que compare con una base de tiempo.
+    iv.   Alimentación.
+
+Según la selección del sensor será necesario la implementación de otros
+dispositivos: Para este caso decidimos usar un sensor de campo magnético.
+
+-   Sensor de Efecto de Hall:el efecto Hall, descubierto por Edwin C. Hall en
+    1879, consiste en la producción de una caída de voltaje a través de un c
+    onductor o semiconductor con corriente, bajo la influencia de un campo
+    magnético externo.
+    En la actualidad existen dos tipos de sensores de efecto Hall, uno con
+    con salida lineal y otro con salida digital.
+
+Dada la aplicación lo mas apropiado es usar un sensor con salida digital en
+conjunto con un imán de neodimio.
+
+La pantalla debe tener dimenciones necesarias para visualizar al menos 20
+caracteres.
+
+La unidad de procesamiento deberá poder procesar los datos entrantes desde el
+sensor, contar, comparar y mostrar los datos en una pantalla simultaneamente:
+La unidad de procesamiento disponible para el desarrollo del primer prototipo
+será un arduino.
+
+La alimentación debe suplir a la unidad de procesamiento, la pantalla y el
+sensor.
