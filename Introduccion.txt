@@ -1,0 +1,15 @@
+Tacómetro para principiantes
+
+Introducción:
+
+El deporte exige cada vez una supervisión mas completa de las variables que
+involucra el entrenamiento, en el ciclismo por ejemplo la regulación de la
+cantidad de pedalazos por minuto es necesaria para administrar correctamente
+la energía requerida en un trayecto, la oxigenación, la relación en los cambios
+y peso, entre otros.
+Debemos enfocarnos entonces en darle al ciclista un mecanismo para  regular
+alguna de las variables mencionadas anteriormente y así pueda alcanzar de forma
+optima su meta.
+Mediante el uso de un  sistema de adquisición de datos: que consiste en la toma
+de muestras del mundo real (sistema analógico) para generar datos que puedan ser
+manipulados por un ordenador (sistema digital).
