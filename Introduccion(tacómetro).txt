@@ -3,7 +3,7 @@ Tacómetro para principiantes
 Introducción:
 
 El deporte exige cada vez una supervisión mas completa de las variables que
-involucra el entrenamiento, en el ciclismo por ejemplo la regulación de la
+involucra el entrenamiento, en el ciclismo por ejemplo, la regulación de la
 cantidad de pedalazos por minuto es necesaria para administrar correctamente
 la energía requerida en un trayecto, la oxigenación, la relación en los cambios
 y peso, entre otros.
@@ -23,9 +23,9 @@ terminos y conceptos:
 
     El tacómetro para esta aplicación necesita:
 
-    i.    Algún tipo de sensor que determine cuando se completa un ciclo.
+    i.    Algún tipo de sensor que determine cuando se completa un ciclo (un pedaléo).
     ii.   Una pantalla en la cual se pueda observar la medición.
-    iii.  Una unidad de procesamiento que compare con una base de tiempo.
+    iii.  Una unidad de procesamiento que pueda hacer comparaciones contra una base de tiempo.
     iv.   Alimentación.
 
 Según la selección del sensor será necesario la implementación de otros
