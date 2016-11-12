@@ -1,4 +1,6 @@
 Propuesta de arquitectura	
+
+
 	
 Según la selección del sensor será necesario la implementación de otros
 dispositivos: Para este caso decidimos usar un sensor de campo magnético.

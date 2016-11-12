@@ -2,8 +2,8 @@ Tacómetro para principiantes
 
 Introducción:
 
-El deporte exige cada vez una supervisión mas completa de las variables que
-involucra el entrenamiento, en el ciclismo por ejemplo, la regulación de la
+El deporte exige cada vez una supervisión mas completa de las variables 
+que involucra el entrenamiento, en el ciclismo por ejemplo, la regulación de la
 cantidad de pedalazos por minuto es necesaria para administrar correctamente
 la energía requerida en un trayecto, la oxigenación, la relación en los cambios
 y peso, entre otros.
@@ -37,4 +37,23 @@ El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
 		verlos pero lo suficientemente alta para que la fidelidad del dato sea mayor.
 	5- 	Repetir el proceso la cantidad de tiempo que el usuario lo necesite.
 	
+
+Para determinar el tiempo (ts) vamos a tener encuenta los siguientes aspectos, como el evento
+es algo cuya frecuencia es desconocida este debe funcionar como una iterrupcion, osea que el 
+tiempo ts no va a depender de la cantidad de pedaleos aunque si se tendrá encuenta.
+
+Lo que realmente nos da pista sobre el valor de (ts) es la frecuencia de visualización con la cual 
+el usuario pueda reconocer la información.
+
+Dicha frecuencia entonces debe ser igual o menor a los 0.3Hz pero no debe de ser muy baja, ya que entre mas 
+alto sea ts, los datos entregados van a tener menor precisión.
+
+Los RPM (cadencia) que tiene un cilista profesional es de maximo 90 RPM en llano, y 85 RPM en subida
+osea dicho evento tendrá una frecuencia máxima de 1.5Hz.
+
+Si tomamos la freecuencia de 0.3 Hz, tendremos oportunidad de capturar 5 interrupciones (pedalazos)
+en el mejor de los casos, lo suficiente para hacer calculos en más datos, por otro lado en el peor de los casos
+no dará ningun pedalazo en ts = 3 s y por tanto mostrará 0 RPM.
+
+Ahora sabemos que el ts osea tiempo en el que debemos hacer  las tareas es de tres segundos.
 

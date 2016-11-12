@@ -4,7 +4,6 @@ Requerimientos funcionales:
 	2. Debe funcionar para distancias y tiempos que el usuario desee.
 	3. Debe usar un sensor que pueda medir la velocidad.
 
-
 Requerimientos no funcionales:
 
 	1. El dispositivo debe ser resistente a diferentes situaciones en las que el ciclista se encuentre.
