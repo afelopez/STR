@@ -1,0 +1,17 @@
+Propuesta de arquitectura	
+	
+Según la selección del sensor será necesario la implementación de otros
+dispositivos: Para este caso decidimos usar un sensor de campo magnético.
+
+-   Sensor de Efecto de Hall:el efecto Hall, descubierto por Edwin C. Hall en
+    1879, consiste en la producción de una caída de voltaje a través de un c
+    onductor o semiconductor con corriente, bajo la influencia de un campo
+    magnético externo.
+    En la actualidad existen dos tipos de sensores de efecto Hall, uno con
+    con salida lineal y otro con salida digital.
+
+Dada la aplicación lo mas apropiado es usar un sensor con salida digital en
+conjunto con un imán de neodimio.
+
+La pantalla debe tener dimenciones necesarias para visualizar al menos 20
+caracteres.

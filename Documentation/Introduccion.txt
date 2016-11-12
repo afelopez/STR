@@ -1,0 +1,40 @@
+Tacómetro para principiantes
+
+Introducción:
+
+El deporte exige cada vez una supervisión mas completa de las variables que
+involucra el entrenamiento, en el ciclismo por ejemplo, la regulación de la
+cantidad de pedalazos por minuto es necesaria para administrar correctamente
+la energía requerida en un trayecto, la oxigenación, la relación en los cambios
+y peso, entre otros.
+Debemos enfocarnos entonces en darle al ciclista un mecanismo para  regular
+alguna de las variables mencionadas anteriormente y así pueda alcanzar de forma
+optima su meta.
+Mediante el uso de un  sistema de adquisición de datos: que consiste en la toma
+de muestras del mundo real (sistema analógico) para generar datos que puedan ser
+manipulados por un ordenador (sistema digital).
+
+Antes de comenzar a describir la solución, debemos tener encuenta algunos
+terminos y conceptos:
+
+-   Tacómetro: Instrumento para medir la velocidad de rotación de un mecanismo
+    de la máquina al que va acoplado; generalmente, indica la velocidad en
+    revoluciones por minuto. Sinónimos:	cuentavueltas, taquímetro.
+
+    El tacómetro para esta aplicación necesita:
+
+    i.    Algún tipo de sensor que determine cuando se completa un ciclo (un pedaléo).
+    ii.   Una pantalla en la cual se pueda observar la medición.
+    iii.  Una unidad de procesamiento que pueda hacer comparaciones contra una base de tiempo.
+    iv.   Alimentación.
+    
+El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
+
+	1-	Detectar cuando existe un pedaleo.
+	2-	Contar N pedaleos en un espacio de tiempo (ts) aún por determinar.
+	3-	Calcular las RPM que es igual a N·60/ts (60 ya que es un minuto)
+	4-	Mostrar los datos con una frecuencia lo suficientemente baja para que el usuario pueda
+		verlos pero lo suficientemente alta para que la fidelidad del dato sea mayor.
+	5- 	Repetir el proceso la cantidad de tiempo que el usuario lo necesite.
+	
+
