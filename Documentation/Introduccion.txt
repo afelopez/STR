@@ -28,7 +28,7 @@ términos y conceptos:
     iii.  Una unidad de procesamiento que pueda hacer comparaciones contra una base de tiempo.
     iv.   Alimentación.
     
-Para determinar las tareas que debe hacer el dispositivo es debemos preguntarnos    
+Para determinar las tareas que debe hacer el dispositivo es debemos preguntarnos.    
     
 El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
 
