@@ -10,12 +10,12 @@ y peso, entre otros.
 Debemos enfocarnos entonces en darle al ciclista un mecanismo para  regular
 alguna de las variables mencionadas anteriormente y así pueda alcanzar de forma
 optima su meta.
-Mediante el uso de un  sistema de adquisición de datos: que consiste en la toma
+Mediante el uso de un  sistema de adquisición de datos, que consiste en la toma
 de muestras del mundo real (sistema analógico) para generar datos que puedan ser
 manipulados por un ordenador (sistema digital).
 
 Antes de comenzar a describir la solución, debemos tener encuenta algunos
-terminos y conceptos:
+términos y conceptos:
 
 -   Tacómetro: Instrumento para medir la velocidad de rotación de un mecanismo
     de la máquina al que va acoplado; generalmente, indica la velocidad en
@@ -23,10 +23,12 @@ terminos y conceptos:
 
     El tacómetro para esta aplicación necesita:
 
-    i.    Algún tipo de sensor que determine cuando se completa un ciclo (un pedaléo).
+    i.    Algún tipo de sensor que determine cuando se completa un ciclo (un pedaleo).
     ii.   Una pantalla en la cual se pueda observar la medición.
     iii.  Una unidad de procesamiento que pueda hacer comparaciones contra una base de tiempo.
     iv.   Alimentación.
+    
+Para determinar las tareas que debe hacer el dispositivo es debemos preguntarnos    
     
 El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
 
@@ -34,26 +36,26 @@ El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
 	2-	Contar N pedaleos en un espacio de tiempo (ts) aún por determinar.
 	3-	Calcular las RPM que es igual a N·60/ts (60 ya que es un minuto)
 	4-	Mostrar los datos con una frecuencia lo suficientemente baja para que el usuario pueda
-		verlos pero lo suficientemente alta para que la fidelidad del dato sea mayor.
+		verlos, pero lo suficientemente alta para que la fidelidad del dato sea mayor.
 	5- 	Repetir el proceso la cantidad de tiempo que el usuario lo necesite.
 	
 
 Para determinar el tiempo (ts) vamos a tener encuenta los siguientes aspectos, como el evento
-es algo cuya frecuencia es desconocida este debe funcionar como una iterrupcion, osea que el 
-tiempo ts no va a depender de la cantidad de pedaleos aunque si se tendrá encuenta.
+es algo cuya frecuencia es desconocida este debe funcionar como una iterrupción, osea que el 
+tiempo ts no va a depender de la cantidad de pedaleos aunque si se tendrá en cuenta.
 
 Lo que realmente nos da pista sobre el valor de (ts) es la frecuencia de visualización con la cual 
 el usuario pueda reconocer la información.
 
-Dicha frecuencia entonces debe ser igual o menor a los 0.3Hz pero no debe de ser muy baja, ya que entre mas 
-alto sea ts, los datos entregados van a tener menor precisión.
+Dicha frecuencia entonces debe ser igual o menor a los 0.3Hz pero no debe de ser muy baja, ya que entre mas alto sea ts, 
+los datos entregados van a tener menor precisión.
 
-Los RPM (cadencia) que tiene un cilista profesional es de maximo 90 RPM en llano, y 85 RPM en subida
+Los RPM (cadencia) que tiene un cilista profesional es de máximo 90 RPM en llano, y 85 RPM en subida
 osea dicho evento tendrá una frecuencia máxima de 1.5Hz.
 
 Si tomamos la freecuencia de 0.3 Hz, tendremos oportunidad de capturar 5 interrupciones (pedalazos)
-en el mejor de los casos, lo suficiente para hacer calculos en más datos, por otro lado en el peor de los casos
+en el mejor de los casos, lo suficiente para hacer cálculos en más datos, por otro lado en el peor de los casos
 no dará ningun pedalazo en ts = 3 s y por tanto mostrará 0 RPM.
 
-Ahora sabemos que el ts osea tiempo en el que debemos hacer  las tareas es de tres segundos.
+Ahora sabemos que el ts osea tiempo en el que debemos hacer las tareas es de tres segundos.
 
