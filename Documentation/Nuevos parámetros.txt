@@ -1,0 +1,28 @@
+Consideraciones para el proyecto:
+
+Estas nuevas consideraciones sobre el funcionamiento nos dará pista 
+sobre los requerimientos funcionales no funcionales y restrigciones.
+
+i.		¿Cuáles son los eventos de interés?
+ii.		¿Cuáles son las bases de tiempo?
+iii.	¿Cómo debe ser el mecanismo de control de interrupciones?
+iv.		¿Qué dispositivos necesito?
+
+
+i.		A simple vista el evento que me interesa es el momento en el
+		que se cumple un pedalazo, es decir, el pedal pasa dos veces por el 
+		mismo punto (el sensor) sin embargo es necesario hacer un análisis más
+		concreto respecto a lo que me interesa visualizar y cuando.
+		El dato de interés es la cantidad de pedalazos en un minuto (RPM) o 
+		cadencia; para un ciclista, debemos pensar que significado tiene. 
+		O sea, identificar que rango de datos tiene relevancia.
+
+ii.		Sí el tiempo entre pedaleo y pedaleo es mayor a 10 segundos,
+		el contador se reiniciará mostrando RPM: 0. 
+		La frecuencia de visualización será de una muestra por segundo.
+
+iii.	El pedaléo será una interrupción y por tanto es aperiódica,
+		la visualisazón no dependerá de este.
+
+iv. 	Sensor, unidad de procesamiento, display y alimentación.
+  
