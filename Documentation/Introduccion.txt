@@ -1,61 +1,70 @@
-TacÛmetro para principiantes
+Tac√≥metro para principiantes
 
-IntroducciÛn:
+Introducci√≥n:
 
-El deporte exige cada vez una supervisiÛn mas completa de las variables 
-que involucra el entrenamiento, en el ciclismo por ejemplo, la regulaciÛn de la
+El deporte exige cada vez una supervisi√≥n mas completa de las variables
+que involucra el entrenamiento, en el ciclismo por ejemplo, la regulaci√≥n de la
 cantidad de pedalazos por minuto es necesaria para administrar correctamente
-la energÌa requerida en un trayecto, la oxigenaciÛn, la relaciÛn en los cambios
+la energ√≠a requerida en un trayecto, la oxigenaci√≥n, la relaci√≥n en los cambios
 y peso, entre otros.
 Debemos enfocarnos entonces en darle al ciclista un mecanismo para  regular
-alguna de las variables mencionadas anteriormente y asÌ pueda alcanzar de forma
+alguna de las variables mencionadas anteriormente y as√≠ pueda alcanzar de forma
 optima su meta.
-Mediante el uso de un  sistema de adquisiciÛn de datos, que consiste en la toma
-de muestras del mundo real (sistema analÛgico) para generar datos que puedan ser
+Mediante el uso de un  sistema de adquisici√≥n de datos, que consiste en la toma
+de muestras del mundo real (sistema anal√≥gico) para generar datos que puedan ser
 manipulados por un ordenador (sistema digital).
 
-Antes de comenzar a describir la soluciÛn, debemos tener encuenta algunos
-tÈrminos y conceptos:
+Antes de comenzar a describir la soluci√≥n, debemos tener encuenta algunos
+t√©rminos y conceptos:
 
--   TacÛmetro: Instrumento para medir la velocidad de rotaciÛn de un mecanismo
-    de la m·quina al que va acoplado; generalmente, indica la velocidad en
-    revoluciones por minuto. SinÛnimos:	cuentavueltas, taquÌmetro.
+-   Tac√≥metro: Instrumento para medir la velocidad de rotaci√≥n de un mecanismo
+    de la m√°quina al que va acoplado; generalmente, indica la velocidad en
+    revoluciones por minuto. Sin√≥nimos:	cuentavueltas, taqu√≠metro.
 
-    El tacÛmetro para esta aplicaciÛn necesita:
+    El tac√≥metro para esta aplicaci√≥n necesita:
 
-    i.    Alg˙n tipo de sensor que determine cuando se completa un ciclo (un pedaleo).
-    ii.   Una pantalla en la cual se pueda observar la mediciÛn.
+    i.    Alg√∫n tipo de sensor que determine cuando se completa un ciclo (un pedaleo).
+    ii.   Una pantalla en la cual se pueda observar la medici√≥n.
     iii.  Una unidad de procesamiento que pueda hacer comparaciones contra una base de tiempo.
-    iv.   AlimentaciÛn.
-    
-Para determinar las tareas que debe hacer el dispositivo es debemos preguntarnos.    
-    
+    iv.   Alimentaci√≥n.
+
+Para determinar las tareas que debe hacer el dispositivo es debemos preguntarnos.
+
 El dispositivo debe de estar en capacidad de realizar las siguientes tareas:
 
 	1-	Detectar cuando existe un pedaleo.
-	2-	Contar N pedaleos en un espacio de tiempo (ts) a˙n por determinar.
-	3-	Calcular las RPM que es igual a N∑60/ts (60 ya que es un minuto)
+	2-	Contar N pedaleos en un espacio de tiempo (ts) a√∫n por determinar.
+	3-	Calcular las RPM que es igual a N¬∑60/ts (60 ya que es un minuto)
 	4-	Mostrar los datos con una frecuencia lo suficientemente baja para que el usuario pueda
 		verlos, pero lo suficientemente alta para que la fidelidad del dato sea mayor.
 	5- 	Repetir el proceso la cantidad de tiempo que el usuario lo necesite.
-	
+
 
 Para determinar el tiempo (ts) vamos a tener encuenta los siguientes aspectos, como el evento
-es algo cuya frecuencia es desconocida este debe funcionar como una iterrupciÛn, osea que el 
-tiempo ts no va a depender de la cantidad de pedaleos aunque si se tendr· en cuenta.
+es algo cuya frecuencia es desconocida este debe funcionar como una iterrupci√≥n, osea que el
+tiempo ts no va a depender de la cantidad de pedaleos aunque si se tendr√° en cuenta.
 
-Lo que realmente nos da pista sobre el valor de (ts) es la frecuencia de visualizaciÛn con la cual 
-el usuario pueda reconocer la informaciÛn.
+Lo que realmente nos da pista sobre el valor de (ts) es la frecuencia de visualizaci√≥n con la cual
+el usuario pueda reconocer la informaci√≥n.
 
-Dicha frecuencia entonces debe ser igual o menor a los 0.3Hz pero no debe de ser muy baja, ya que entre mas alto sea ts, 
-los datos entregados van a tener menor precisiÛn.
+Dicha frecuencia entonces debe ser igual o menor a los 1Hz pero no debe de ser muy baja, ya que entre mas alto sea ts,
+los datos entregados van a tener menor precisi√≥n.
 
-Los RPM (cadencia) que tiene un cilista profesional es de m·ximo 90 RPM en llano, y 85 RPM en subida
-osea dicho evento tendr· una frecuencia m·xima de 1.5Hz.
+Los RPM (cadencia) que tiene un cilista profesional es de m√°ximo 90 RPM en llano, y 85 RPM en subida
+osea dicho evento tendr√° una frecuencia m√°xima de 1.5Hz.
 
-Si tomamos la freecuencia de 0.3 Hz, tendremos oportunidad de capturar 5 interrupciones (pedalazos)
-en el mejor de los casos, lo suficiente para hacer c·lculos en m·s datos, por otro lado en el peor de los casos
-no dar· ningun pedalazo en ts = 3 s y por tanto mostrar· 0 RPM.
+Si tomamos la freecuencia de 1Hz, tendremos oportunidad de capturar 5 interrupciones (pedalazos)
+en el mejor de los casos, lo suficiente para hacer c√°lculos en m√°s datos, por otro lado en el peor de los casos
+no dar√° ningun pedalazo en ts = 1 s y por tanto mostrar√° 0 RPM.
 
 Ahora sabemos que el ts osea tiempo en el que debemos hacer las tareas es de tres segundos.
 
+
+¬øPara quien es este dispositivo?
+
+Este sistema va ser muy √∫til para aquellas personas amantes del deporte y que
+estan empezando a entrenar o para aquellos que utilizan la bicicleta
+cofrecuencia en la ciudad , para ellos es muy importante aprender
+a regular su cadencia, y conocer a qu√© ritmo van cuando hacen sus entrenamientos
+y de esta manera mejorar sus marcas alcanzando metas m√°s exigentes a lo
+largo de su entrenamiento.

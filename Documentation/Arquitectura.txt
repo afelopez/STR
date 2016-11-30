@@ -1,5 +1,5 @@
-Propuesta de arquitectura	
-	
+Propuesta de arquitectura
+
 Según la selección del sensor será necesario la implementación de otros
 dispositivos: Para este caso decidimos usar un sensor de campo magnético.
 
@@ -15,3 +15,8 @@ conjunto con un imán de neodimio.
 
 La pantalla debe tener dimenciones necesarias para visualizar al menos 20
 caracteres.
+
+El dispositivo de procesamiento, el que hace los calculos mientras espera
+cada interrupción, tiene un tiempo bastante relajado para hacer sus tareas, por
+esto podemos ser flexibles en su escogencia. Para este caso usaremos una placa
+arduino nano.

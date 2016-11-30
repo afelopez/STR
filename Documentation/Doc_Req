@@ -1,0 +1,21 @@
+Requerimientos funcionales
+
+  i.    El dispositivo debe detectar los pedaleos
+  ii.   Debe poder contar dichos pedaleos
+  iii.  Debe tener un conteo periodico independiente al pedaleo
+  iv.   Debe mostrar los datos con una frecuencia de 1Hz
+  v.    Debe ser autónomo y repetir el anterior proceso una y otra vez:
+        ser ciclico y tener alimentación independiente
+
+Requerimentos no Funcionales
+
+  i.    El dispositivo debe ser lo suficientemente portable para ponerle en
+        el manubrio de la bicicleta: debe tener dimenciones inferiores a (20x10x8)cm
+  ii.   Debe tener un sensor que esté situado frente a los pedales. (Efecto Hall)
+  iii.  Debe contar con un Iman amarrado al pedal
+
+Restricciones
+
+  i.    El peso no debe exceder los 110gr
+  ii.   Debe ser resistente al agua.
+  iii.  Debe ser robusto, soporte de impactos en caso de caida.
